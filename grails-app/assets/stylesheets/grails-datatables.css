@@ -1,0 +1,28 @@
+.dataTable .checkboxColumn {
+    width: 1px;
+    padding-left: 2px;
+    padding-right: 2px;
+    text-align: center;
+}
+
+.dataTable .checkboxColumn .DataTables_sort_wrapper{
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+input[type='checkbox'] {
+    /*background-color: transparent;*/
+    /*border: none;*/
+    /*width: 13px;*/
+    /*height: 13px;*/
+    padding: 0;
+    margin: 0;
+    /*vertical-align: bottom;*/
+    /*position: relative;*/
+    /*top: 4px;*/
+    /**overflow: hidden;*/
+}
+
+div.searchGroup {
+    float: right;
+}

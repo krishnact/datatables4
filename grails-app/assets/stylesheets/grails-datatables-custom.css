@@ -1,0 +1,119 @@
+div.dataTables_length label .ui-selectmenu-button {
+    width: 50px !important;
+    height: 17px;
+    vertical-align: -5px;
+}
+div.dataTables_length  {
+    vertical-align: middle;
+    padding: 0px 1px;
+}
+div.dataTables_length label span.ui-selectmenu-text {
+    font-size: 11px;
+    padding-top: 1px;
+    padding-left: 4px;
+}
+div.dataTables_filter label input[type='search'], input.columnSearch, div.searchGroup input {
+    font-size: 11px;
+    width: 250px;
+    height: 20px;
+    margin-right: 1px;
+    margin-bottom: 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+table.dataTable tfoot tr td {
+    height: 18px;
+    vertical-align: top;
+}
+table.dataTable.no-footer {
+    border-bottom-width: 0
+}
+input.columnSearch {
+    width: 0;
+    position: absolute;
+}
+div.dataTables_wrapper div.dataTables_processing {
+    color: black;
+    font-weight: bold;
+    height: 15px;
+    width: 200px;
+    top: 0;
+    left: 0;
+    margin: 3px;
+    padding: 2px;
+    background: white;
+    border: 3px solid red;
+    border-radius: 3px;
+}
+table.dataTable tfoot th, table.dataTable tfoot td {
+    padding: 4px 6px;
+}
+.datatablesButtons {
+    height: 20px;
+    margin-left: 2px;
+    margin-bottom: 2px;
+}
+button.datatablesButtons span.ui-button-text {
+    padding-top: 2px;
+    padding-bottom: 3px;
+    font-size: 11px;
+}
+.buttons a, .dataTablesLink {
+    font-weight: bold;
+    overflow: visible;
+    margin: 10px 5px 10px 0;
+    width: 200px;
+}
+.dataTables_wrapper div.fg-toolbar.ui-toolbar.ui-widget-header.ui-helper-clearfix {
+    height: 20px;
+    padding: 4px;
+}
+div.ui-selectmenu-menu ul.ui-menu li.ui-menu-item {
+    font-size: 11px;
+}
+table.dataTable thead th div.DataTables_sort_wrapper {
+    text-align: left;
+}
+table.dataTable thead th {
+    padding: 5px 18px 5px 5px;
+}
+table.dataTable tbody td {
+    padding: 2px 6px;
+}
+.dataTables_wrapper .dataTables_paginate .fg-button {
+    padding: 2px 4px;
+    border: 1px solid #cccccc;
+    height: 20px;
+    vertical-align: middle;
+}
+div.dataTables_paginate.fg-buttonset.ui-buttonset.fg-buttonset-multi.ui-buttonset-multi.paging_full_numbers_callback {
+    padding-top: 0;
+    margin-right: 4px;
+}
+.dataTable .checkboxColumn {
+    width: 1px;
+    padding-left: 2px;
+    padding-right: 2px;
+    text-align: center;
+}
+.dataTable .checkboxColumn .DataTables_sort_wrapper{
+
+    padding-left: 2px;
+    padding-right: 2px;
+}
+div.reportGroup {
+    width: 150px;
+    height: 17px;
+    margin: 0 auto;
+    text-align: center;
+}
+div.dataTables_wrapper div.dataTables_info {
+    height: 20px;
+    box-sizing: border-box;
+    padding: 3px 1px;
+    vertical-align: middle;
+}
+div.dataTables_wrapper {
+    font-size: 11px;
+}
