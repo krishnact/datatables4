@@ -10,7 +10,7 @@ buildscript {
 }
 
 version "0.2-SNAPSHOT"
-group "datatables4"
+group "com.github.krishnact"
 
 apply plugin:"eclipse"
 apply plugin:"idea"
