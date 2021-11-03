@@ -51,7 +51,7 @@ class DataTablesController {
         for(item in itemData.items) {
             def rowArray = []
             columns.each { column ->
-                rowArray << column.getTableFormattedValueFromItem(item, itemIndex)
+                rowArray << Helper.castSafe(column.getTableFormattedValueFromItem(item, itemIndex))
             }
             data << rowArray
             itemIndex++
@@ -112,9 +112,10 @@ class DataTablesController {
         def fileName = g.message(code: "datatables.${tableDefinition.name}.reportFileName", default: reportData.defaultFileName)
         response.setHeader("Content-disposition", "attachment;filename=${fileName}")
         // Add cookie for the JQuery fileDownload plugin.
-        def cookie = new javax.servlet.http.Cookie("fileDownload", "true")
+        javax.servlet.http.Cookie cookie = new javax.servlet.http.Cookie("fileDownload", "true")
         cookie.path = "/"
         cookie.maxAge = 100
+        cookie.setSecure(true);
         // Sometimes we get a broken pipe exception, presumably if the user cancels the download. It's not reproducable. Use try-catch block to resolve.
         try {
             response.addCookie(cookie)

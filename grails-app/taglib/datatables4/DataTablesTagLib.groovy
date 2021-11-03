@@ -93,7 +93,7 @@ class DataTablesTagLib {
                 tableDefinition.columns.each { column ->
                     if(column.includedInTable) {
                         out << "<td>"
-                        out << column.getTableFormattedValueFromItem(item, itemIndex)
+                        out << Helper.castSafe(column.getTableFormattedValueFromItem(item, itemIndex))
                         out << "</td>"
                     }
                 }

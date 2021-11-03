@@ -68,7 +68,7 @@ public class CriteriaAggregator {
                 orList = []
                 orCriteriaGroups[orGroup] = orList
             }
-            orList << criterion
+            orList << Helper.castSafe(criterion)
         } else {
             andCriteria << criterion
         }

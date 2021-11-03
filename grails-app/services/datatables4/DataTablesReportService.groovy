@@ -29,7 +29,7 @@ class DataTablesReportService {
         items.eachWithIndex { item, itemIndex ->
             def rowArray = []
             reportColumns.each { column ->
-                rowArray << column.getReportFormattedValueFromItem(item, itemIndex)
+                rowArray << Helper.castSafe(column.getReportFormattedValueFromItem(item, itemIndex))
             }
             report << rowArray.join(",") << lineSeparator
         }

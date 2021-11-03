@@ -60,7 +60,9 @@ class DataTablesService {
 
         // Add dynamic SQL Restriction (result of sqlRestrictionFunction).
         if(dynamicSqlRestriction) {
-            customQueryAggregator.addCriterion(Restrictions.sqlRestriction(dynamicSqlRestriction))
+            customQueryAggregator.addCriterion(
+                    Restrictions.sqlRestriction(Helper.makeSqlDeleteAndUpdateSafe(dynamicSqlRestriction))
+            )
         }
 
         // Count the total unfiltered items. We still apply the sqlRestriction and column criteria, just not the search filter.
@@ -270,7 +272,7 @@ class DataTablesService {
                     buffer << ","
                 }
                 // Write the key.
-                buffer << "\"" << key << "\":"
+                buffer << "\"" << Helper.removeSpaces(key) << "\":"
                 serializeJavaScriptObject(value, buffer)
             }
             buffer << "}"
@@ -292,16 +294,16 @@ class DataTablesService {
                     object instanceof Number    ||
                     object.isNumber()
             ) {
-                buffer << object
+                buffer << Helper.castSafe(object)
             } else {
                 def stringValue = object.toString()
                 if(
                         stringValue in ["true", "false"] ||
                         (stringValue.startsWith("function")  && stringValue.endsWith("}"))
                 ) {
-                    buffer << stringValue
+                    buffer <<  Helper.castSafe(stringValue)
                 } else {
-                    buffer << "'" << stringValue << "'"
+                    buffer << "'" <<  Helper.castSafe(stringValue) << "'"
                 }
             }
         }

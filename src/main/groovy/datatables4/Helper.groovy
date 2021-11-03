@@ -56,4 +56,26 @@ class Helper {
         return  '<"row"<"col-md-4"l><"myButtons"B><"col-md-4"f>r>t<"F"ip>'
     }
 
+    public static String fixParams(String param){
+        return param.replaceAll(/[^\w._\-_.]/,'')
+    }
+
+    public static String removeNewLines(String text){
+        return text.replaceAll(/[\n\r]/,' ')
+    }
+
+    public static String makeSqlArgSafe(String sqlParam){
+        return sqlParam.replaceAll(/[, ()]/,'')
+    }
+    public static String removeSpaces(String sqlParam){
+        return sqlParam.replaceAll(/[\s]/,'')
+    }
+
+    public static String makeSqlDeleteAndUpdateSafe(String sqlParam){
+        return sqlParam.replaceAll(/(?i)delete|update/,'')
+    }
+
+    public static def castSafe(def param){
+        return param
+    }
 }
