@@ -135,7 +135,7 @@ class DataTablesTagLib {
         /***************************************************************
          * Write the JavaScript.                                       *
          ***************************************************************/
-        GroovyPageTemplate
+
         out << render(
                 template: "/dataTablesTemplates/dataTableJavaScript",
                 plugin: "grails-datatables",
